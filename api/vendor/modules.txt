@@ -1,0 +1,16 @@
+# github.com/couchbase/gocb/v2 v2.4.1
+## explicit; go 1.13
+github.com/couchbase/gocb/v2
+github.com/couchbase/gocb/v2/search
+# github.com/couchbase/gocbcore/v10 v10.1.1
+## explicit; go 1.13
+github.com/couchbase/gocbcore/v10
+github.com/couchbase/gocbcore/v10/connstr
+github.com/couchbase/gocbcore/v10/memd
+github.com/couchbase/gocbcore/v10/scram
+# github.com/golang/snappy v0.0.4
+## explicit
+github.com/golang/snappy
+# github.com/google/uuid v1.3.0
+## explicit
+github.com/google/uuid
