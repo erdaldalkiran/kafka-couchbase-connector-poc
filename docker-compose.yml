@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   kafka:
-    image: obsidiandynamics/kafka
+    image: obsidiandynamics/kafka:2.3.0-11
     ports:
       - "2181:2181"
       - "9092:9092"
@@ -15,7 +15,7 @@ services:
       KAFKA_RESTART_DELAY: "5"
       ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: "0"
   kafdrop:
-    image: obsidiandynamics/kafdrop
+    image: obsidiandynamics/kafdrop:3.29.0
     ports:
       - "9000:9000"
     environment:
