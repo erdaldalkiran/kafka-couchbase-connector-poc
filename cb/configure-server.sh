@@ -23,4 +23,25 @@ couchbase-cli bucket-create -c 127.0.0.1:8091 --username $COUCHBASE_ADMINISTRATO
 
 sleep 15
 
+# Setup Scope
+couchbase-cli collection-manage -c 127.0.0.1:8091 --username $COUCHBASE_ADMINISTRATOR_USERNAME \
+  --password $COUCHBASE_ADMINISTRATOR_PASSWORD --bucket $COUCHBASE_BUCKET \
+  --create-scope demo
+
+sleep 15
+
+# Setup Collection
+couchbase-cli collection-manage -c 127.0.0.1:8091 --username $COUCHBASE_ADMINISTRATOR_USERNAME \
+  --password $COUCHBASE_ADMINISTRATOR_PASSWORD --bucket $COUCHBASE_BUCKET \
+  --create-collection $COUCHBASE_SCOPE.$COUCHBASE_COLLECTION
+
+sleep 15
+
+# Setup Collection
+couchbase-cli collection-manage -c 127.0.0.1:8091 --username $COUCHBASE_ADMINISTRATOR_USERNAME \
+  --password $COUCHBASE_ADMINISTRATOR_PASSWORD --bucket $COUCHBASE_BUCKET \
+  --create-collection $COUCHBASE_SCOPE.$COUCHBASE_OUTBOX_COLLECTION
+
+sleep 15
+
 fg 1

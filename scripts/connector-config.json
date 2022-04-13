@@ -1,0 +1,20 @@
+{
+  "connector.class": "com.couchbase.connect.kafka.CouchbaseSourceConnector",
+  "tasks.max": "8",
+  "couchbase.topic": "demo-topic",
+  "couchbase.seed.nodes": "cb",
+  "couchbase.bootstrap.timeout": "1m",
+  "couchbase.bucket": "demo",
+  "couchbase.collections": "demo.item_outbox_event",
+  "couchbase.username": "Administrator",
+  "couchbase.password": "admin123!",
+  "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+  "couchbase.source.handler": "com.couchbase.connect.kafka.handler.source.RawJsonSourceHandler",
+  "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+  "couchbase.stream.from": "SAVED_OFFSET_OR_NOW",
+  "couchbase.compression": "ENABLED",
+  "couchbase.flow.control.buffer": "16m",
+  "transforms": "ignoreDeletes",
+  "transforms.ignoreDeletes.type": "com.couchbase.connect.kafka.transform.DropIfNullValue"
+}
+
